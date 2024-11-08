@@ -1,0 +1,2839 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>Ограничения звонков - Интерактивная обработка вызова</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#-" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Интерактивная обработка вызова" class="md-header__button md-logo" aria-label="Интерактивная обработка вызова" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Интерактивная обработка вызова
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Ограничения звонков
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Интерактивная обработка вызова" class="md-nav__button md-logo" aria-label="Интерактивная обработка вызова" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Интерактивная обработка вызова
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        Описание Data API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" >
+      
+      <label class="md-nav__link" for="__nav_2">
+        Pristupaya k rabote
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pristupaya k rabote" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Pristupaya k rabote
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pristupaya-k-rabote/_index/" class="md-nav__link">
+        Приступая к работе
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pristupaya-k-rabote/dobavlenie-v-spisok/" class="md-nav__link">
+        Добавление в список
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pristupaya-k-rabote/soglasheniya/" class="md-nav__link">
+        Соглашения
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../pristupaya-k-rabote/sozdanie-tokena-data-api/" class="md-nav__link">
+        Создание токена DATA API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      <label class="md-nav__link" for="__nav_3">
+        Struktura data api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Struktura data api" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Struktura data api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_index/" class="md-nav__link">
+        Структура Data API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_2" type="checkbox" id="__nav_3_2" >
+      
+      <label class="md-nav__link" for="__nav_3_2">
+        Dopolnitelnye nastroyki
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Dopolnitelnye nastroyki" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_2">
+          <span class="md-nav__icon md-icon"></span>
+          Dopolnitelnye nastroyki
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dopolnitelnye-nastroyki/_index/" class="md-nav__link">
+        Дополнительные настройки
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dopolnitelnye-nastroyki/obnovlenie-informacii-o-nastroyke-zapisi/" class="md-nav__link">
+        Редактировать настройки записей разговоров
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dopolnitelnye-nastroyki/settings-timezone/" class="md-nav__link">
+        Список часовых поясов
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../dopolnitelnye-nastroyki/vyvod-vsekh-shablonov-nastroek-zapisi-zvonkov/" class="md-nav__link">
+        Получить все настройки записи разговоров
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_3" type="checkbox" id="__nav_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_3">
+        Istoriya zvonkov
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Istoriya zvonkov" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Istoriya zvonkov
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../istoriya-zvonkov/_index/" class="md-nav__link">
+        История звонков
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../istoriya-zvonkov/poluchit-spisok-vsekh-zvonkov/" class="md-nav__link">
+        Получить список всех звонков
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../istoriya-zvonkov/poluchit/" class="md-nav__link">
+        Получить список отчётов пользователей
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_4" type="checkbox" id="__nav_3_4" >
+      
+      <label class="md-nav__link" for="__nav_3_4">
+        Metod 2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Metod 2" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_4">
+          <span class="md-nav__icon md-icon"></span>
+          Metod 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-2/_index/" class="md-nav__link">
+        Управление отделами
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-2/delete-employee-group-id/" class="md-nav__link">
+        Удалить отдел
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-2/g/" class="md-nav__link">
+        Получение информации об отделе 
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-2/poluchenie-informacii-o-vsekh-dostupnykh-otdelakh/" class="md-nav__link">
+        Получить список всех отделов
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-2/post-employee-group/" class="md-nav__link">
+        Создать новый отдел
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-2/put-employee-group-id/" class="md-nav__link">
+        Редактировать отдел
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5" type="checkbox" id="__nav_3_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5">
+        Metod numbers virtual number
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Metod numbers virtual number" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_5">
+          <span class="md-nav__icon md-icon"></span>
+          Metod numbers virtual number
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/_index/" class="md-nav__link">
+        Управление виртуальными номерами
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/poisk-konkretnogo-virtualnogo-nomera-po-id/" class="md-nav__link">
+        Поиск виртуального номера
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/poluchenie-spiska-vsekh-cuschestvuyuschikh-virtua/" class="md-nav__link">
+        Получить список всех виртуальных номеров
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/udalenie-virtualnogo-nomera-po-ego-id/" class="md-nav__link">
+        Удалить виртуальный номер
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_5" type="checkbox" id="__nav_3_5_5" >
+      
+      <label class="md-nav__link" for="__nav_3_5_5">
+        Obnovlenie informacii o virtualnom nomere po ego
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Obnovlenie informacii o virtualnom nomere po ego" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_5_5">
+          <span class="md-nav__icon md-icon"></span>
+          Obnovlenie informacii o virtualnom nomere po ego
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/obnovlenie-informacii-o-virtualnom-nomere-po-ego/_index/" class="md-nav__link">
+        Редактировать виртуальный номер
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/obnovlenie-informacii-o-virtualnom-nomere-po-ego/redaktirovat-gorodskoy-nomer/" class="md-nav__link">
+        Редактировать городской номер
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/obnovlenie-informacii-o-virtualnom-nomere-po-ego/redaktirovat-mobilnyy-nomer/" class="md-nav__link">
+        Редактировать мобильный номер
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/obnovlenie-informacii-o-virtualnom-nomere-po-ego/redaktirovat-nomera-drugikh-operatorov-sip-peread-2/" class="md-nav__link">
+        Редактировать номера других операторов Sip-переадресации
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/obnovlenie-informacii-o-virtualnom-nomere-po-ego/redaktirovat-nomera-drugikh-operatorov-sip-peread/" class="md-nav__link">
+        Редактировать номера других операторов Sip-регистрации
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_6" type="checkbox" id="__nav_3_5_6" >
+      
+      <label class="md-nav__link" for="__nav_3_5_6">
+        Sip registraciya
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sip registraciya" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_5_6">
+          <span class="md-nav__icon md-icon"></span>
+          Sip registraciya
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/sip-registraciya/_index/" class="md-nav__link">
+        SIP-регистрация и SIP-переадрессация
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/sip-registraciya/dobavit-sozdat-nomer-sip-pereadressaciya/" class="md-nav__link">
+        Добавить/создать номер (SIP-переадресация)
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/sip-registraciya/sip-registraciya/" class="md-nav__link">
+        Добавить/создать номер (SIP-регистрация)
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_5_7" type="checkbox" id="__nav_3_5_7" >
+      
+      <label class="md-nav__link" for="__nav_3_5_7">
+        Vyvod parametrov virtualnogo nomera po ego znache
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Vyvod parametrov virtualnogo nomera po ego znache" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_5_7">
+          <span class="md-nav__icon md-icon"></span>
+          Vyvod parametrov virtualnogo nomera po ego znache
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../metod-numbers-virtual-number/vyvod-parametrov-virtualnogo-nomera-po-ego-znache/_index/" class="md-nav__link">
+        Поиск виртуального номера по его параметрам
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_6" type="checkbox" id="__nav_3_6" >
+      
+      <label class="md-nav__link" for="__nav_3_6">
+        Nastroyka parametrov vkhodyaschikh vyzovov
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Nastroyka parametrov vkhodyaschikh vyzovov" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_6">
+          <span class="md-nav__icon md-icon"></span>
+          Nastroyka parametrov vkhodyaschikh vyzovov
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nastroyka-parametrov-vkhodyaschikh-vyzovov/_index/" class="md-nav__link">
+        Входящие сценарии
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nastroyka-parametrov-vkhodyaschikh-vyzovov/dobavlenie-redaktirovanie-pereryva-v-uzhe-sozdann/" class="md-nav__link">
+        Добавить/редактировать перерыв в уже созданном сценарии.
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nastroyka-parametrov-vkhodyaschikh-vyzovov/scenariy-na-gruppu-nomerov-2/" class="md-nav__link">
+        Получить настройки виртуальных номеров для входящих звонков
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nastroyka-parametrov-vkhodyaschikh-vyzovov/udalit-pereryv/" class="md-nav__link">
+        Удалить перерыв
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nastroyka-parametrov-vkhodyaschikh-vyzovov/vkhodyaschie-scenarii-na-gruppy-nomerov/" class="md-nav__link">
+        Получить информацию о группах входящих сценариев
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../nastroyka-parametrov-vkhodyaschikh-vyzovov/vkhodyaschie-scenarii-na-nomera-2/" class="md-nav__link">
+        Получить  информацию о виртуальных номерах и настроек входящих сценариев для них
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7" type="checkbox" id="__nav_3_7" >
+      
+      <label class="md-nav__link" for="__nav_3_7">
+        Osnovnye parametry iskhodyaschikh scenariev
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Osnovnye parametry iskhodyaschikh scenariev" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_7">
+          <span class="md-nav__icon md-icon"></span>
+          Osnovnye parametry iskhodyaschikh scenariev
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/_index/" class="md-nav__link">
+        Исходящие сценарии
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/poluchit-spisok-nomerov/" class="md-nav__link">
+        Получить список номеров для исходящих сценариев
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7_3" type="checkbox" id="__nav_3_7_3" >
+      
+      <label class="md-nav__link" for="__nav_3_7_3">
+        Nastroyki osnovnogo nomera kompanii
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Nastroyki osnovnogo nomera kompanii" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_7_3">
+          <span class="md-nav__icon md-icon"></span>
+          Nastroyki osnovnogo nomera kompanii
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/nastroyki-osnovnogo-nomera-kompanii/_index/" class="md-nav__link">
+        Настройки основного номера компании
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/nastroyki-osnovnogo-nomera-kompanii/redaktirovanie-nastroek-osnovnogo-nomera/" class="md-nav__link">
+        Редактировать настройки основного номера
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7_3_3" type="checkbox" id="__nav_3_7_3_3" >
+      
+      <label class="md-nav__link" for="__nav_3_7_3_3">
+        Scenario outbound main
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Scenario outbound main" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_7_3_3">
+          <span class="md-nav__icon md-icon"></span>
+          Scenario outbound main
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/nastroyki-osnovnogo-nomera-kompanii/scenario-outbound-main/_index/" class="md-nav__link">
+        Получение настроек основного номера компании
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7_4" type="checkbox" id="__nav_3_7_4" >
+      
+      <label class="md-nav__link" for="__nav_3_7_4">
+        New article
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="New article" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_7_4">
+          <span class="md-nav__icon md-icon"></span>
+          New article
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/new-article/_index/" class="md-nav__link">
+        Региональные сценарии
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/new-article/dobavlenie-iskhodyaschikh-regionalnykh-scenariev/" class="md-nav__link">
+        Добавить исходящий региональный сценарий
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/new-article/poluchit-parametry-regionalnogo-scenariya/" class="md-nav__link">
+        Получить настройки исходящего регионального сценария
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/new-article/poluchit-spisok-regionov-dlya-iskhodyaschikh-scen/" class="md-nav__link">
+        Получить список регионов для исходящих сценариев
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/new-article/redaktirovanie-regionalnogo-iskhodyaschego-scenar/" class="md-nav__link">
+        Редактировать параметры регионального исходящего сценария
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/new-article/udalenie-regionalnogo-iskhodyaschego-scenariya/" class="md-nav__link">
+        Удаление регионального исходящего сценария
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7_4_7" type="checkbox" id="__nav_3_7_4_7" >
+      
+      <label class="md-nav__link" for="__nav_3_7_4_7">
+        Scenario outbound regional
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Scenario outbound regional" data-md-level="4">
+        <label class="md-nav__title" for="__nav_3_7_4_7">
+          <span class="md-nav__icon md-icon"></span>
+          Scenario outbound regional
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/new-article/scenario-outbound-regional/_index/" class="md-nav__link">
+        Получить список  исходящих региональных сценариев
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_7_5" type="checkbox" id="__nav_3_7_5" >
+      
+      <label class="md-nav__link" for="__nav_3_7_5">
+        Personalnye iskhodyaschie scenarii
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Personalnye iskhodyaschie scenarii" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_7_5">
+          <span class="md-nav__icon md-icon"></span>
+          Personalnye iskhodyaschie scenarii
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/personalnye-iskhodyaschie-scenarii/_index/" class="md-nav__link">
+        Персональные исходящие сценарии
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/personalnye-iskhodyaschie-scenarii/dobavit-personalnyy-iskhodyaschiy-scenariy/" class="md-nav__link">
+        Добавить персональный исходящий сценарий
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/personalnye-iskhodyaschie-scenarii/poluchit-parametry-personalnogo-iskhodyaschego-sc/" class="md-nav__link">
+        Получить настройки персонального исходящего сценария
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/personalnye-iskhodyaschie-scenarii/redaktirovat-personalnyy-iskhodyaschiy-scenariy/" class="md-nav__link">
+        Редактировать персональный исходящий сценарий
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/personalnye-iskhodyaschie-scenarii/scenario-outbound-personal/" class="md-nav__link">
+        Получить список  персональных исходящих сценариев
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../osnovnye-parametry-iskhodyaschikh-scenariev/personalnye-iskhodyaschie-scenarii/udalit-personalnyy-iskhodyaschiy-scenariy/" class="md-nav__link">
+        Удалить персональный исходящий сценарий
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8" type="checkbox" id="__nav_3_8" >
+      
+      <label class="md-nav__link" for="__nav_3_8">
+        Rabochie raspisaniya
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Rabochie raspisaniya" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_8">
+          <span class="md-nav__icon md-icon"></span>
+          Rabochie raspisaniya
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabochie-raspisaniya/_index/" class="md-nav__link">
+        Графики активности
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabochie-raspisaniya/poluchit-parametry-grafika-aktivnosti-po-nazvaniy/" class="md-nav__link">
+        Получить настройки графика активности по названию
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabochie-raspisaniya/poluchit-rabochee-raspisanie-po-unikalnomu-identi/" class="md-nav__link">
+        Получить параметры графика активности
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabochie-raspisaniya/redaktirovanie-grafika-aktivnosti-po-chislam/" class="md-nav__link">
+        Редактировать график активности по числам
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabochie-raspisaniya/redaktirovanie-grafika-aktivnosti-po-ciklam/" class="md-nav__link">
+        Редактировать график активности по циклам
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabochie-raspisaniya/sozdat-grafik-aktivnosti-po-chislam/" class="md-nav__link">
+        Создать график активности по числам
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabochie-raspisaniya/sozdat-grafik-aktivnosti-po-ciklu/" class="md-nav__link">
+        Создать график активности по циклу
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabochie-raspisaniya/sozdat-grafik-aktivnosti/" class="md-nav__link">
+        Создать график активности по дням
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabochie-raspisaniya/udalit-grafik-aktivnosti/" class="md-nav__link">
+        Удалить график активности
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8_10" type="checkbox" id="__nav_3_8_10" >
+      
+      <label class="md-nav__link" for="__nav_3_8_10">
+        Rabota s 2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Rabota s 2" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_8_10">
+          <span class="md-nav__icon md-icon"></span>
+          Rabota s 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabochie-raspisaniya/rabota-s-2/_index/" class="md-nav__link">
+        Получить все существующие графики активности
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_8_11" type="checkbox" id="__nav_3_8_11" >
+      
+      <label class="md-nav__link" for="__nav_3_8_11">
+        Redaktirovat grafik aktivnosti
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Redaktirovat grafik aktivnosti" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_8_11">
+          <span class="md-nav__icon md-icon"></span>
+          Redaktirovat grafik aktivnosti
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabochie-raspisaniya/redaktirovat-grafik-aktivnosti/_index/" class="md-nav__link">
+        Редактировать график активности по дням
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_9" type="checkbox" id="__nav_3_9" >
+      
+      <label class="md-nav__link" for="__nav_3_9">
+        Rabota s sotrudnikami
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Rabota s sotrudnikami" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_9">
+          <span class="md-nav__icon md-icon"></span>
+          Rabota s sotrudnikami
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/_index/" class="md-nav__link">
+        Управление сотрудниками
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/delete-empoyee-id/" class="md-nav__link">
+        Удаление сотрудника
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/get-employee-id/" class="md-nav__link">
+        Получить информацию о сотруднике
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/get-employee/" class="md-nav__link">
+        Cписок всех сотрудников в системе
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/get-role-id/" class="md-nav__link">
+        Получить роль
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/get-role-name-name/" class="md-nav__link">
+        Получить роль по имени
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/poisk-po-imeni-pozicii/" class="md-nav__link">
+        Получить должность по имени
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/poluchenie-konkretnoy-pozicii-po-id/" class="md-nav__link">
+        Получить должность по уникальному идентификатору
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/poluchenie-spiska-dostupnykh-roley/" class="md-nav__link">
+        Получить список всех ролей
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/post-employee/" class="md-nav__link">
+        Создать нового сотрудника
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/put-employee/" class="md-nav__link">
+        Редактировать сотрудника
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/rabota-so-spiskom-dostupnykh-dolzhnostey/" class="md-nav__link">
+        Получить список всех должностей
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../rabota-s-sotrudnikami/sozdanie-novoy-pozicii/" class="md-nav__link">
+        Создать должность
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_10" type="checkbox" id="__nav_3_10" >
+      
+      <label class="md-nav__link" for="__nav_3_10">
+        Sim karty
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sim karty" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_10">
+          <span class="md-nav__icon md-icon"></span>
+          Sim karty
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sim-karty/_index/" class="md-nav__link">
+        Мобильные номера
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sim-karty/poluchenie-spiska-mobilnykh-nomerov-dostupnykh-dl/" class="md-nav__link">
+        Получить список мобильных номеров доступных для подключения со своего лицевого счёта
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sim-karty/poluchit-informaciyu-o-sim-karte/" class="md-nav__link">
+        Получить информацию о мобильном номере
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sim-karty/poluchit/" class="md-nav__link">
+        Добавить мобильный номер
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_10_5" type="checkbox" id="__nav_3_10_5" >
+      
+      <label class="md-nav__link" for="__nav_3_10_5">
+        Metod
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Metod" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_10_5">
+          <span class="md-nav__icon md-icon"></span>
+          Metod
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sim-karty/metod/_index/" class="md-nav__link">
+        Получить информацию о текущих мобильных номерах
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_11" type="checkbox" id="__nav_3_11" >
+      
+      <label class="md-nav__link" for="__nav_3_11">
+        Sozdanie i upravlenie shablonami blokirovaniya no
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Sozdanie i upravlenie shablonami blokirovaniya no" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_11">
+          <span class="md-nav__icon md-icon"></span>
+          Sozdanie i upravlenie shablonami blokirovaniya no
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sozdanie-i-upravlenie-shablonami-blokirovaniya-no/_index/" class="md-nav__link">
+        Черный список
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sozdanie-i-upravlenie-shablonami-blokirovaniya-no/blokirovka-zvonkov-s-anonimnykh-nomerov/" class="md-nav__link">
+        Получить состояние настройки блокировки звонков с анонимных номеров
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sozdanie-i-upravlenie-shablonami-blokirovaniya-no/dobavit-nomer-ili-diapazon-nomera-v-chernyy-spiso/" class="md-nav__link">
+        Добавить номер или диапазон номеров в черный список
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sozdanie-i-upravlenie-shablonami-blokirovaniya-no/poluchenie-spiska-masok-dlya-nomerov-iz-chernogo/" class="md-nav__link">
+        Получить номера и маски из черного списка
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sozdanie-i-upravlenie-shablonami-blokirovaniya-no/udalit-nomera-ili-diapazony-nomerov-iz-chernogo-s/" class="md-nav__link">
+        Удалить номера из черного списка
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sozdanie-i-upravlenie-shablonami-blokirovaniya-no/vklyuchit-opciyu-blokirovki-zvonkov-s-anonimnykh/" class="md-nav__link">
+        Включить/выключить настройку блокировки звонков с анонимных номеров
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12" type="checkbox" id="__nav_3_12" checked>
+      
+      <label class="md-nav__link" for="__nav_3_12">
+        Upravlenie limitami
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Upravlenie limitami" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_12">
+          <span class="md-nav__icon md-icon"></span>
+          Upravlenie limitami
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Ограничения звонков
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Ограничения звонков
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    Ограничения звонков - общие правила
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    Ограничения звонков - персональные правила
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    Международные id стран
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../metod-pomogaet-nayti-id-stran-dlya-nastrpoyki-pra/" class="md-nav__link">
+        Поиск международных id стран
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12_3" type="checkbox" id="__nav_3_12_3" >
+      
+      <label class="md-nav__link" for="__nav_3_12_3">
+        Limitations personal
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Limitations personal" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_12_3">
+          <span class="md-nav__icon md-icon"></span>
+          Limitations personal
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations-personal/_index/" class="md-nav__link">
+        Ограничения звонков - персональные правила
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations-personal/poluchit-spisok-personalnykh-pravil-dlya-ogranich/" class="md-nav__link">
+        Получить список персональных правил для ограничения звонков
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations-personal/redaktirovat-spisok-personalnykh-pravil-dlya-ogra/" class="md-nav__link">
+        Редактировать список персональных правил для ограничения звонков
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations-personal/sozdat-spisok-personalnykh-pravil-dlya-ogranichen/" class="md-nav__link">
+        Создать список персональных правил для ограничения звонков
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../limitations-personal/udalit-spisok-personalnykh-pravil-dlya-ogranichen/" class="md-nav__link">
+        Удалить список персональных правил для ограничения звонков
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_12_4" type="checkbox" id="__nav_3_12_4" >
+      
+      <label class="md-nav__link" for="__nav_3_12_4">
+        Ogranichenie zvonkov obschie pravila
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Ogranichenie zvonkov obschie pravila" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_12_4">
+          <span class="md-nav__icon md-icon"></span>
+          Ogranichenie zvonkov obschie pravila
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ogranichenie-zvonkov-obschie-pravila/_index/" class="md-nav__link">
+        Ограничение звонков - общие правила
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ogranichenie-zvonkov-obschie-pravila/limitations-main/" class="md-nav__link">
+        Получить настройки правила ограничения звонков для всех сотрудников
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ogranichenie-zvonkov-obschie-pravila/redaktirovat-nastroyku-pravila-ogranicheniya-zvon/" class="md-nav__link">
+        Редактировать настройку правила ограничения звонков для всех сотрудников
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13" type="checkbox" id="__nav_3_13" >
+      
+      <label class="md-nav__link" for="__nav_3_13">
+        Upravlenie melodiyami
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Upravlenie melodiyami" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_13">
+          <span class="md-nav__icon md-icon"></span>
+          Upravlenie melodiyami
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/_index/" class="md-nav__link">
+        Мелодии
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13_2" type="checkbox" id="__nav_3_13_2" >
+      
+      <label class="md-nav__link" for="__nav_3_13_2">
+        Melodii dlya vsekh kompanii
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Melodii dlya vsekh kompanii" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_13_2">
+          <span class="md-nav__icon md-icon"></span>
+          Melodii dlya vsekh kompanii
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/melodii-dlya-vsekh-kompanii/_index/" class="md-nav__link">
+        Мелодии для всей компании
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/melodii-dlya-vsekh-kompanii/poluchenie-nastroek-melodii-dlya-vsey-kompanii/" class="md-nav__link">
+        Получить настройки мелодии  “Для всей компании”
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/melodii-dlya-vsekh-kompanii/redaktirovanie-nastroek-melodii-dlya-vsey-kompan/" class="md-nav__link">
+        Редактирование настроек мелодии “Для всей компании”
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13_3" type="checkbox" id="__nav_3_13_3" >
+      
+      <label class="md-nav__link" for="__nav_3_13_3">
+        Moya audioteka 2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Moya audioteka 2" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_13_3">
+          <span class="md-nav__icon md-icon"></span>
+          Moya audioteka 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/moya-audioteka-2/_index/" class="md-nav__link">
+        Моя аудиотека
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/moya-audioteka-2/oluchit-spisok-melodiy-iz-kataloga-moya-audiotek/" class="md-nav__link">
+        Получить список мелодий из каталога “Моя аудиотека”
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/moya-audioteka-2/sozdanie-novoy-melodii-dlya-klienta/" class="md-nav__link">
+        Добавить мелодию в каталог “Моя аудиотека”
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/moya-audioteka-2/udalenie-melodii-klienta/" class="md-nav__link">
+        Удалить мелодию из каталога “Моя аудиотека”
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13_4" type="checkbox" id="__nav_3_13_4" >
+      
+      <label class="md-nav__link" for="__nav_3_13_4">
+        Personalnye melodii
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Personalnye melodii" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_13_4">
+          <span class="md-nav__icon md-icon"></span>
+          Personalnye melodii
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/personalnye-melodii/_index/" class="md-nav__link">
+        Персональные мелодии
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/personalnye-melodii/poluchit-nastroyki-personalnykh-melodiy/" class="md-nav__link">
+        Получить все настроенные персональные мелодии
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/personalnye-melodii/redaktirovat-nastroyki-personalnykh-melodiy/" class="md-nav__link">
+        Редактировать настройки персональных мелодий
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/personalnye-melodii/sozdat-nastroyki-personalnykh-melodiy/" class="md-nav__link">
+        Добавить персональную мелодию
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/personalnye-melodii/udalit-nastroyki-personalnykh-melodiy/" class="md-nav__link">
+        Удалить настройки персональных мелодий
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_13_5" type="checkbox" id="__nav_3_13_5" >
+      
+      <label class="md-nav__link" for="__nav_3_13_5">
+        Poluchit spisok melodiy
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Poluchit spisok melodiy" data-md-level="3">
+        <label class="md-nav__title" for="__nav_3_13_5">
+          <span class="md-nav__icon md-icon"></span>
+          Poluchit spisok melodiy
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/poluchit-spisok-melodiy/_index/" class="md-nav__link">
+        Основные  настройки мелодий
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/poluchit-spisok-melodiy/poluchit-melodiyu-gudki/" class="md-nav__link">
+        Получить мелодию “Гудки”
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../upravlenie-melodiyami/poluchit-spisok-melodiy/poluchit-spisok-melodiy-iz-kataloga-standartnyy/" class="md-nav__link">
+        Получить список мелодий из каталога “Стандартный каталог”
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_14" type="checkbox" id="__nav_3_14" >
+      
+      <label class="md-nav__link" for="__nav_3_14">
+        Voice mail
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Voice mail" data-md-level="2">
+        <label class="md-nav__title" for="__nav_3_14">
+          <span class="md-nav__icon md-icon"></span>
+          Voice mail
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voice-mail/_index/" class="md-nav__link">
+        Автоответчик компании
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voice-mail/poluchenie-spiska-nastroek-golosovykh-soobscheniy/" class="md-nav__link">
+        Получить все доступные настройки автоответчика
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../voice-mail/redaktirovat-avtootvetchik-kompanii/" class="md-nav__link">
+        Редактировать автоответчик компании
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Vvedenie
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Vvedenie" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Vvedenie
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../vvedenie/_index/" class="md-nav__link">
+        Введение
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    Ограничения звонков - общие правила
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    Ограничения звонков - персональные правила
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    Международные id стран
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Ограничения звонков</h1>
+                
+                <p>:::info </p>
+<p>URL для доступа к API: <a href="https://simple-api.cp.megafon.ru">https://simple-api.cp.megafon.ru</a></p>
+<p>:::</p>
+<h2 id="-">Ограничения звонков - общие правила</h2>
+<p>Метод <code>/limitations/main</code>используется для определения ограничений звонков для всех сотрудников. Он позволяет установить, какие направления звонков будут доступны для сотрудников всей компании, таких как “Звонки на мобильные”, “Междугородние звонки”, “Спутниковые звонки” и “Международные звонки.</p>
+<p>{% table %}</p>
+<hr />
+<ul>
+<li>{% colwidth=[253] isHeader=true %}</li>
+</ul>
+<p>Метод</p>
+<ul>
+<li>{% colwidth=[529] isHeader=true %}</li>
+</ul>
+<p>Описание</p>
+<hr />
+<ul>
+<li>{% colwidth=[253] isHeader=true %}</li>
+</ul>
+<p><a href="./ogranichenie-zvonkov-obschie-pravila/limitations-main">Получить настройки правила ограничения звонков для всех сотрудников</a></p>
+<ul>
+<li>{% colwidth=[529] %}</li>
+</ul>
+<p>Метод  позволяет извлекать текущие параметры и настройки, касающиеся прав доступа пользователей к ресурсам системы.</p>
+<hr />
+<ul>
+<li>{% colwidth=[253] isHeader=true %}</li>
+</ul>
+<p><a href="./ogranichenie-zvonkov-obschie-pravila/redaktirovat-nastroyku-pravila-ogranicheniya-zvon">Редактировать настройку правила ограничения звонков для всех сотрудников</a></p>
+<ul>
+<li>{% colwidth=[529] %}</li>
+</ul>
+<p>Метод внесения изменений в уже существующие правила,  ограничения на звонки для всех сотрудников</p>
+<p>{% /table %}</p>
+<h2 id="-_1">Ограничения звонков - персональные правила</h2>
+<p>Метод <code>/limitations/personal</code>используется для установки ограничений доступов конкретных пользователей. Он позволяет управлять доступом в зависимости от различных условий, таких как мобильный доступ, международные или внутренние ограничения, а также доступ для определённых сотрудников и групп.</p>
+<p>{% table %}</p>
+<hr />
+<ul>
+<li>{% colwidth=[253] isHeader=true %}</li>
+</ul>
+<p>Метод</p>
+<ul>
+<li>{% colwidth=[529] isHeader=true %}</li>
+</ul>
+<p>Описание</p>
+<hr />
+<ul>
+<li>{% colwidth=[253] isHeader=true %}</li>
+</ul>
+<p><a href="./limitations-personal/poluchit-spisok-personalnykh-pravil-dlya-ogranich">Получить список персональных правил для ограничения звонков</a></p>
+<ul>
+<li>{% colwidth=[529] %}</li>
+</ul>
+<p>Метод извлечения всех существующих правил, установленных пользователем для ограничения  звонков.</p>
+<hr />
+<ul>
+<li>{% colwidth=[253] isHeader=true %}</li>
+</ul>
+<p><a href="./limitations-personal/sozdat-spisok-personalnykh-pravil-dlya-ogranichen">Создать список персональных правил для ограничения звонков</a></p>
+<ul>
+<li>{% colwidth=[529] %}</li>
+</ul>
+<p>Метод добавления нового правила, регулирующего ограничения звонков.</p>
+<hr />
+<ul>
+<li>{% colwidth=[253] isHeader=true %}</li>
+</ul>
+<p><a href="./limitations-personal/redaktirovat-spisok-personalnykh-pravil-dlya-ogra">Редактировать список персональных правил для ограничения звонков</a></p>
+<ul>
+<li>{% colwidth=[529] %}</li>
+</ul>
+<p>Метод внесения изменений в уже существующие правила,  ограничения на звонки.</p>
+<hr />
+<ul>
+<li>{% colwidth=[253] isHeader=true %}</li>
+</ul>
+<p><a href="./limitations-personal/udalit-spisok-personalnykh-pravil-dlya-ogranichen">Удалить список персональных правил для ограничения звонков</a></p>
+<ul>
+<li>{% colwidth=[529] %}</li>
+</ul>
+<p>Метод для удаления  персональных правил сотрудников или отделов для ограничения звонков.</p>
+<hr />
+<ul>
+<li>{% colwidth=[253] isHeader=true %}</li>
+</ul>
+<p><a href="./metod-pomogaet-nayti-id-stran-dlya-nastrpoyki-pra">Поиск международных id стран</a></p>
+<ul>
+<li>{% colwidth=[529] %}</li>
+</ul>
+<p>Метод для  получения уникальных идентификаторов стран.</p>
+<p>{% /table %}</p>
+<h2 id="id">Международные id стран</h2>
+<p>Метод <code>GET /limitations/region?_order=asc&amp;_sort=name&amp;type=country</code> помогает найти id стран для настройки правил ограничения звонков для международных звонков.</p>
+<p>{% table %}</p>
+<hr />
+<ul>
+<li>{% colwidth=[253] isHeader=true %}</li>
+</ul>
+<p>Метод</p>
+<ul>
+<li>{% colwidth=[529] isHeader=true %}</li>
+</ul>
+<p>Описание</p>
+<hr />
+<ul>
+<li>{% colwidth=[253] isHeader=true %}</li>
+</ul>
+<p><a href="./metod-pomogaet-nayti-id-stran-dlya-nastrpoyki-pra">Поиск международных id стран</a></p>
+<ul>
+<li>{% colwidth=[529] %}</li>
+</ul>
+<p>Метод для  получения уникальных идентификаторов стран.</p>
+<p>{% /table %}</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../sozdanie-i-upravlenie-shablonami-blokirovaniya-no/vklyuchit-opciyu-blokirovki-zvonkov-s-anonimnykh/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Включить/выключить настройку блокировки звонков с анонимных номеров" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Включить/выключить настройку блокировки звонков с анонимных номеров
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../metod-pomogaet-nayti-id-stran-dlya-nastrpoyki-pra/" class="md-footer__link md-footer__link--next" aria-label="Next: Поиск международных id стран" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Поиск международных id стран
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+      
+        <script src="../../../js/init.js"></script>
+      
+    
+  </body>
+</html>

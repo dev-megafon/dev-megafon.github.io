@@ -1,0 +1,1279 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="icon" href="../../../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.4">
+    
+    
+      
+        <title>Параметры запроса - Интерактивная обработка вызова</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.f7f47774.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.3f5d1f46.min.css">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:"Roboto Mono"}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/styles/default.min.css">
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="none" data-md-color-accent="none">
+  
+    
+    <script>function __prefix(e){return new URL("../../../..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#contact" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../../.." title="Интерактивная обработка вызова" class="md-header__button md-logo" aria-label="Интерактивная обработка вызова" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Интерактивная обработка вызова
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Параметры запроса
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Интерактивная обработка вызова" class="md-nav__button md-logo" aria-label="Интерактивная обработка вызова" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Интерактивная обработка вызова
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        Описание  Call API
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../vvedenie/" class="md-nav__link">
+        Введение
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+      
+      <label class="md-nav__link" for="__nav_3">
+        Pristupaya k rabote
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Pristupaya k rabote" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Pristupaya k rabote
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../pristupaya-k-rabote/_index/" class="md-nav__link">
+        Приступая к работе
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../pristupaya-k-rabote/dobavlenie-ip-adresa-v-spisok-razreshennykh/" class="md-nav__link">
+        Добавление IP-адреса в список разрешенных
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../pristupaya-k-rabote/soglasheniya/" class="md-nav__link">
+        Соглашения
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../pristupaya-k-rabote/sozdanie-tokena-call-api/" class="md-nav__link">
+        Создание токена Call API
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4">
+        Struktura call api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Struktura call api" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Struktura call api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../_index/" class="md-nav__link">
+        Структура Call API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../obschie-polya-dlya-vsekh-metodov/" class="md-nav__link">
+        Основные особенности структуры
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../vozvraschaemye-oshibki-sall-api/" class="md-nav__link">
+        Коды ошибок Сall API
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4" type="checkbox" id="__nav_4_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4_4">
+        Metody call api
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Metody call api" data-md-level="2">
+        <label class="md-nav__title" for="__nav_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Metody call api
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../_index/" class="md-nav__link">
+        Метод Start employee call
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_2" type="checkbox" id="__nav_4_4_2" >
+      
+      <label class="md-nav__link" for="__nav_4_4_2">
+        Opisanie metoda start employee call
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Opisanie metoda start employee call" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_2">
+          <span class="md-nav__icon md-icon"></span>
+          Opisanie metoda start employee call
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../opisanie-metoda-start-employee-call/_index/" class="md-nav__link">
+        Описание метода Start Employee call
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_3" type="checkbox" id="__nav_4_4_3" >
+      
+      <label class="md-nav__link" for="__nav_4_4_3">
+        Parametry otveta
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Parametry otveta" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_3">
+          <span class="md-nav__icon md-icon"></span>
+          Parametry otveta
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parametry-otveta/_index/" class="md-nav__link">
+        Параметры ответа
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../parametry-otveta/primer-otveta/" class="md-nav__link">
+        Пример ответа
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+            
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4_4_4" type="checkbox" id="__nav_4_4_4" checked>
+      
+      <label class="md-nav__link" for="__nav_4_4_4">
+        Parametry zaprosa
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Parametry zaprosa" data-md-level="3">
+        <label class="md-nav__title" for="__nav_4_4_4">
+          <span class="md-nav__icon md-icon"></span>
+          Parametry zaprosa
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Параметры запроса
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Параметры запроса
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    Сотрудник, с которым будет соединен абонент из параметра contact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact_1" class="md-nav__link">
+    Сообщение для проигрывания абоненту, который задан в параметре contact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#employee" class="md-nav__link">
+    Сообщение для проигрывания абоненту, который задан в параметре employee
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../primer-zaprosa/" class="md-nav__link">
+        Пример запроса для инициации вызова сотрудника
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contact" class="md-nav__link">
+    Сотрудник, с которым будет соединен абонент из параметра contact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contact_1" class="md-nav__link">
+    Сообщение для проигрывания абоненту, который задан в параметре contact
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#employee" class="md-nav__link">
+    Сообщение для проигрывания абоненту, который задан в параметре employee
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  <h1>Параметры запроса</h1>
+                
+                <p>{% table %}</p>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>Название</p>
+<ul>
+<li>{% isHeader=true %}</li>
+</ul>
+<p>Тип</p>
+<ul>
+<li>{% colwidth=[136] isHeader=true %}</li>
+</ul>
+<p>Обязательный</p>
+<ul>
+<li>{% colwidth=[123] isHeader=true %}</li>
+</ul>
+<p>Допустимые значения</p>
+<ul>
+<li>{% isHeader=true %}</li>
+</ul>
+<p>Описание</p>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>access_token</p>
+<ul>
+<li>
+<p>string</p>
+</li>
+<li>
+<p>{% colwidth=[136] %}</p>
+</li>
+</ul>
+<p>Да</p>
+<ul>
+<li>{% colwidth=[123] %}</li>
+</ul>
+<p>-</p>
+<ul>
+<li>Ключ сессии аутентификации.</li>
+</ul>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>first_call</p>
+<ul>
+<li>
+<p>string</p>
+</li>
+<li>
+<p>{% colwidth=[136] %}</p>
+</li>
+</ul>
+<p>да</p>
+<ul>
+<li>{% colwidth=[123] %}</li>
+</ul>
+<p>contact, employee</p>
+<ul>
+<li>Определяет номер, на который необходимо дозвониться в первую очередь:</li>
+</ul>
+<p><code>- employee —</code> сотрудник;</p>
+<p><code>- contact</code>-- вызываемая сторона (обычно клиент).</p>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>switch_at_once</p>
+<ul>
+<li>
+<p>boolean</p>
+</li>
+<li>
+<p>{% colwidth=[136] %}</p>
+</li>
+</ul>
+<p>нет</p>
+<ul>
+<li>{% colwidth=[123] %}</li>
+</ul>
+<p>true, false</p>
+<ul>
+<li>Значение по умолчанию: <code>false</code>.</li>
+</ul>
+<p>Если параметр<code>first_call</code> имеет значение employee, и заданы параметры <code>employee_message</code> и <code>contact_message</code>, то:</p>
+<p>- Первый звонок совершается сотруднику, указанному в параметре <code>employee</code>.</p>
+<p>- Сотрудник после поднятия трубки слушает сообщение до конца, и только после этого совершается звонок абоненту, указанному в параметре <code>contact.</code></p>
+<p>- Во время дозвона до абонента из параметра contact сотрудник слушает сообщение, заданное в параметре <code>media_file_id</code>.</p>
+<p>- После ответа абонента из параметра <code>contact</code> начинается разговор с сотрудником из параметра <code>employee</code>, если параметр <code>switch_at_once</code> имеет значение true.</p>
+<p>- Если параметр <code>switch_at_once</code>имеет значение <code>false</code>, абонент из параметра contact дослушает сообщение до конца, а затем состоится разговор с сотрудником из параметра employee.</p>
+<p>Если параметр<code>first_call</code> имеет значение <code>contact</code>, и заданы параметры c<code>ontact_message</code>и <code>employee_message</code>, то:</p>
+<p>- В первую очередь звонок совершается абоненту, указанному в параметре <code>contact</code>.</p>
+<p>- Абонент из параметра <code>contact</code>после поднятия трубки начинает слушать сообщение, в то время как звонок на сотрудника из параметра<code>employee</code> уже осуществляется.</p>
+<p>- После поднятия трубки сотрудником из параметра <code>employee</code> проигрывание сообщения будет прервано для абонента из параметра contact, и далее состоится разговор, если параметр <code>switch_at_once</code>имеет значение <code>true</code>.</p>
+<p>- Если параметр <code>switch_at_once</code> имеет значение <code>false</code>, сообщение будет проиграно до конца обоим участникам, после чего начнется разговор.</p>
+<p>- Если проигрывание сообщения у кого-то завершилось раньше, он будет слушать сообщение, заданное в параметре <code>media_file_id</code>.</p>
+<p>Если в параметре <code>contact_message</code>тип имеет значение <code>tts</code>, то параметр <code>switch_at_once = true</code> не будет работать.</p>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>early_switching</p>
+<ul>
+<li>
+<p>boolean</p>
+</li>
+<li>
+<p>{% colwidth=[136] %}</p>
+</li>
+</ul>
+<p>нет</p>
+<ul>
+<li>{% colwidth=[123] %}</li>
+</ul>
+<p>true, false</p>
+<ul>
+<li>Значение по умолчанию: <code>false</code>.</li>
+</ul>
+<p>Если параметр <code>early_switching</code>имеет значение true, то сотрудник при дозвоне до абонента будет слышать происходящее на абонентской линии. Например, если оператор ожидает дозвона до абонента, а тот недоступен и у него сработала голосовая почта, при активации параметра early_switching = true оператор сможет услышать сообщение о голосовой почте абонента. Если параметр <code>early_switching = false</code>, оператор будет слушать музыку, заданную в параметре <code>media_file_id</code>.</p>
+<p>Параметр <code>early_switching</code> может иметь значение <code>true</code> только в том случае, если параметр <code>first_call</code> имеет значение <code>employee</code>, а параметр <code>switch_at_once</code> установлен в <code>true</code>. В противном случае возникнет ошибка: <code>-32602 invalid_parameters_combination The combination of parameters is not permitted</code> (см. раздел <a href="./../../vozvraschaemye-oshibki-sall-api">"Коды ошибок Call API</a>").</p>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>media_file_id</p>
+<ul>
+<li>
+<p>number</p>
+</li>
+<li>
+<p>{% colwidth=[136] %}</p>
+</li>
+</ul>
+<p>нет</p>
+<ul>
+<li>
+<p>{% colwidth=[123] %}</p>
+</li>
+<li>
+<p><strong>Значение по умолчанию:</strong> системная мелодия «Музыка переадресации» (<code>dialing_music</code>).</p>
+</li>
+</ul>
+<p>Этот параметр задает идентификатор звукового файла для музыки переадресации. Файл может быть как системным, так и пользовательским.</p>
+<p>Музыка переадресации проигрывается всегда тому плечу, для которого не задан один из параметров <code>contact_message</code>или <code>employee_message</code>.</p>
+<p><strong>Примечание:</strong> Получить список доступных системных или пользовательских файлов можно с помощью DATA API, воспользовавшись методами «Получение списка пользовательских файлов» и «Получение списка системных файлов».</p>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>virtual_phone_number</p>
+<ul>
+<li>
+<p>string</p>
+</li>
+<li>
+<p>{% colwidth=[136] %}</p>
+</li>
+</ul>
+<p>Да</p>
+<ul>
+<li>
+<p>{% colwidth=[123] %}</p>
+</li>
+<li>
+<p>Виртуальный номер: арендуемый клиентом номер, который должен соответствовать международному стандарту E.164 (например, 74993720692).</p>
+</li>
+</ul>
+<p>Этот номер всегда используется в качестве номера звонящего при звонке на номер, указанный в параметре contact. Также он используется в качестве номера звонящего при звонке на номер, указанный в параметре employee, если параметр <code>show_virtual_phone_number</code> имеет значение <code>true</code>.</p>
+<p><strong>Примечание:</strong> Виртуальные номера можно получить с помощью DATA API, воспользовавшись методом «Получение списка виртуальных номеров».</p>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>show_virtual_phone_number</p>
+<ul>
+<li>
+<p>boolean</p>
+</li>
+<li>
+<p>{% colwidth=[136] %}</p>
+</li>
+</ul>
+<p>нет</p>
+<ul>
+<li>{% colwidth=[123] %}</li>
+</ul>
+<p>true, false</p>
+<ul>
+<li>Параметр <code>show_virtual_phone_number</code>: значение по умолчанию -- <code>true</code>.</li>
+</ul>
+<p>Этот параметр определяет, следует ли показывать виртуальный номер, заданный в параметре <code>virtual_phone_number</code>, в качестве номера звонящего абонента для сотрудника, указанного в параметре <code>employee</code>.</p>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>contact</p>
+<ul>
+<li>
+<p>string</p>
+</li>
+<li>
+<p>{% colwidth=[136] %}</p>
+</li>
+</ul>
+<p>да</p>
+<ul>
+<li>
+<p>{% colwidth=[123] %}</p>
+</li>
+<li>
+<p>Номер абонента, на который совершается вызов: номер должен соответствовать международному стандарту E.164 (например, +79091234567).</p>
+</li>
+</ul>
+<p><strong>Внимание!</strong> Внутренние номера сотрудников не поддерживаются.</p>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>external_id</p>
+<ul>
+<li>
+<p>string</p>
+</li>
+<li>
+<p>{% colwidth=[136] %}</p>
+</li>
+</ul>
+<p>нет</p>
+<ul>
+<li>
+<p>{% colwidth=[123] %}</p>
+</li>
+<li>
+<p>Уникальный идентификатор: используется для связывания события звонка с внешней системой.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>dtmf_string</p>
+<ul>
+<li>
+<p>string</p>
+</li>
+<li>
+<p>{% colwidth=[136] %}</p>
+</li>
+</ul>
+<p>нет</p>
+<ul>
+<li>{% colwidth=[123] %}</li>
+</ul>
+<p>0-9, *, #</p>
+<ul>
+<li>Задает DTMF, который будет отправлен абоненту, указанному в параметре <code>contact.</code>С помощью символа . (который обозначает '1 секунду') можно задать таймаут, по истечении которого будет отправлен символ DTMF.</li>
+</ul>
+<p><strong>Пример:</strong></p>
+<p>12.1..4, что означает, что через 1 секунду будет отправлена цифра 12, затем через 1 секунду -- цифра 1, и через 2 секунды -- цифра 4.</p>
+<hr />
+<ul>
+<li>{% colwidth=[122] isHeader=true %}</li>
+</ul>
+<p>direction</p>
+<ul>
+<li>
+<p>string</p>
+</li>
+<li>
+<p>{% colwidth=[136] %}</p>
+</li>
+</ul>
+<p>нет</p>
+<ul>
+<li>{% colwidth=[123] %}</li>
+</ul>
+<p>in, out</p>
+<ul>
+<li>Значение по умолчанию: <code>in</code>.</li>
+</ul>
+<p>Определяет направление звонка:</p>
+<p>- <code>in</code> -- Входящий звонок,</p>
+<p>- <code>out</code>-- Исходящий звонок.</p>
+<p>{% /table %}</p>
+<h3 id="contact">Сотрудник, с которым будет соединен абонент из параметра contact</h3>
+<p>{% table %}</p>
+<hr />
+<ul>
+<li>{% colspan=2 colwidth=[0,48] isHeader=true %}</li>
+</ul>
+<p>Название</p>
+<ul>
+<li>{% colwidth=[85] isHeader=true %}</li>
+</ul>
+<p>Тип</p>
+<ul>
+<li>{% colwidth=[136] isHeader=true %}</li>
+</ul>
+<p>Обязательный</p>
+<ul>
+<li>{% colwidth=[127] isHeader=true %}</li>
+</ul>
+<p>Допустимые значения</p>
+<ul>
+<li>{% isHeader=true %}</li>
+</ul>
+<p>Описание</p>
+<hr />
+<ul>
+<li>{% colspan=2 colwidth=[0,48] %}</li>
+</ul>
+<p>employee</p>
+<ul>
+<li>{% colwidth=[85] %}</li>
+</ul>
+<p>object</p>
+<ul>
+<li>{% colwidth=[136] %}</li>
+</ul>
+<p>Да</p>
+<ul>
+<li>
+<p>{% colwidth=[127] %}</p>
+</li>
+<li>
+<p>Сотрудник, с которым будет соединён абонент, указанный в параметре <code>contact</code>.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li></li>
+<li>
+<p>{% colwidth=[48] %}</p>
+</li>
+</ul>
+<p>id</p>
+<ul>
+<li>{% colwidth=[85] %}</li>
+</ul>
+<p>number</p>
+<ul>
+<li>{% colwidth=[136] %}</li>
+</ul>
+<p>да</p>
+<ul>
+<li>
+<p>{% colwidth=[127] %}</p>
+</li>
+<li>
+<p>Уникальный идентификатор сотрудника.</p>
+</li>
+</ul>
+<p><strong>Примечание:</strong> Этот идентификатор можно получить с помощью DATA API -- получения информации о сотруднике.</p>
+<p>{% /table %}</p>
+<h3 id="contact_1">Сообщение для проигрывания абоненту, который задан в параметре contact</h3>
+<p>{% table %}</p>
+<hr />
+<ul>
+<li>{% colspan=2 colwidth=[153,62] isHeader=true %}</li>
+</ul>
+<p>Название</p>
+<ul>
+<li>{% colwidth=[72] isHeader=true %}</li>
+</ul>
+<p>Тип</p>
+<ul>
+<li>{% colwidth=[142] isHeader=true %}</li>
+</ul>
+<p>Обязательный</p>
+<ul>
+<li>{% colwidth=[127] isHeader=true %}</li>
+</ul>
+<p>Допустимые значения</p>
+<ul>
+<li>{% isHeader=true %}</li>
+</ul>
+<p>Описание</p>
+<hr />
+<ul>
+<li>{% colspan=2 colwidth=[153,62] isHeader=true %}</li>
+</ul>
+<p>contact_message</p>
+<ul>
+<li>{% colwidth=[72] %}</li>
+</ul>
+<p>object</p>
+<ul>
+<li>{% colwidth=[142] %}</li>
+</ul>
+<p>нет</p>
+<ul>
+<li>
+<p>{% colwidth=[127] %}</p>
+</li>
+<li>
+<p>Определяет параметры сообщения, которое необходимо проиграть абоненту, указанному в параметре <code>contact</code>. После окончания проигрывания сообщения будет повторяться сообщение из параметра <code>media_file_id.</code></p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>{% colwidth=[153] isHeader=true %}</p>
+</li>
+<li>
+<p>{% colwidth=[62] %}</p>
+</li>
+</ul>
+<p>type</p>
+<ul>
+<li>{% colwidth=[72] %}</li>
+</ul>
+<p>string</p>
+<ul>
+<li>{% colwidth=[142] %}</li>
+</ul>
+<p>да</p>
+<ul>
+<li>{% colwidth=[127] %}</li>
+</ul>
+<p>media, tts</p>
+<ul>
+<li>Определяет тип сообщения: <code>media</code> -- файл или <code>tts</code>-- текст для услуги синтеза речи (Text-to-Speech).</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>{% colwidth=[153] isHeader=true %}</p>
+</li>
+<li>
+<p>{% colwidth=[62] %}</p>
+</li>
+</ul>
+<p>value</p>
+<ul>
+<li>{% colwidth=[72] %}</li>
+</ul>
+<p>string</p>
+<ul>
+<li>{% colwidth=[142] %}</li>
+</ul>
+<p>да</p>
+<ul>
+<li>
+<p>{% colwidth=[127] %}</p>
+</li>
+<li>
+<p>Если поле<code>type</code>имеет значение <code>media</code>, то в качестве значения принимается идентификатор файла для проигрывания. Файл может быть как системным, так и пользовательским.</p>
+</li>
+</ul>
+<p>Если поле type имеет значение<code>tts</code>, то в качестве значения принимается текст, который будет синтезирован в голосовое сообщение.</p>
+<p><strong>Примечание:</strong> Идентификатор файла можно получить с помощью DATA API -- через методы «Получение списка пользовательских файлов» и «Получение списка системных файлов».</p>
+<p>{% /table %}</p>
+<h3 id="employee">Сообщение для проигрывания абоненту, который задан в параметре <code>employee</code></h3>
+<p>{% table %}</p>
+<hr />
+<ul>
+<li>{% colspan=2 isHeader=true %}</li>
+</ul>
+<p>Название</p>
+<ul>
+<li>{% colwidth=[70] isHeader=true %}</li>
+</ul>
+<p>Тип</p>
+<ul>
+<li>{% colwidth=[142] isHeader=true %}</li>
+</ul>
+<p>Обязательный</p>
+<ul>
+<li>{% colwidth=[127] isHeader=true %}</li>
+</ul>
+<p>Допустимые значения</p>
+<ul>
+<li>{% isHeader=true %}</li>
+</ul>
+<p>Описание</p>
+<hr />
+<ul>
+<li>{% colspan=2 isHeader=true %}</li>
+</ul>
+<p>employee_message</p>
+<ul>
+<li>{% colwidth=[70] %}</li>
+</ul>
+<p>object</p>
+<ul>
+<li>{% colwidth=[142] %}</li>
+</ul>
+<p>нет</p>
+<ul>
+<li>
+<p>{% colwidth=[127] %}</p>
+</li>
+<li>
+<p>Определяет параметры сообщения, которое необходимо проиграть абоненту, указанному в параметре <code>employee</code>. После окончания проигрывания сообщения будет  повторяться сообщение из параметра <code>media_file_id</code>.</p>
+</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>{% isHeader=true %}</p>
+</li>
+<li>
+<p>type</p>
+</li>
+<li>
+<p>{% colwidth=[70] %}</p>
+</li>
+</ul>
+<p>string</p>
+<ul>
+<li>{% colwidth=[142] %}</li>
+</ul>
+<p>да</p>
+<ul>
+<li>{% colwidth=[127] %}</li>
+</ul>
+<p>media, tts</p>
+<ul>
+<li>Определяет тип сообщения: <code>media</code> -- файл или <code>tts</code>-- текст для услуги синтеза речи (Text-to-Speech).</li>
+</ul>
+<hr />
+<ul>
+<li>
+<p>{% isHeader=true %}</p>
+</li>
+<li>
+<p>value</p>
+</li>
+<li>
+<p>{% colwidth=[70] %}</p>
+</li>
+</ul>
+<p>string</p>
+<ul>
+<li>{% colwidth=[142] %}</li>
+</ul>
+<p>да</p>
+<ul>
+<li>
+<p>{% colwidth=[127] %}</p>
+</li>
+<li>
+<p>Если поле <code>type</code> имеет значение <code>media</code>, то в качестве значения принимается идентификатор файла для проигрывания. Файл может быть как системным, так и пользовательским.</p>
+</li>
+</ul>
+<p><strong>Примечание:</strong></p>
+<p>Идентификатор файла для проигрывания можно получить с помощью DATA API: «Получение списка пользовательских файлов» и «Получение списка системных файлов».</p>
+<p>Если поле type имеет значение<code>tts</code>, то в качестве значения принимается текст для синтезирования в голосовое сообщение.</p>
+<p><strong>Внимание!</strong> Длина TTS-сообщения регулируется тарифным планом и установленным лимитом.</p>
+<p>{% /table %}</p>
+                
+                  
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        
+        <a href="../../parametry-otveta/primer-otveta/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Пример ответа" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Пример ответа
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../primer-zaprosa/" class="md-footer__link md-footer__link--next" aria-label="Next: Пример запроса для инициации вызова сотрудника" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Пример запроса для инициации вызова сотрудника
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../../../../assets/javascripts/workers/search.709b4209.min.js", "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.febc23d1.min.js"></script>
+      
+        <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      
+        <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.11.0/highlight.min.js"></script>
+      
+        <script src="../../../../js/init.js"></script>
+      
+    
+  </body>
+</html>
